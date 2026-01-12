@@ -41,6 +41,19 @@
   - 역할: 데스크톱 메신저 클라이언트
   - 최근 업데이트: 2025-01-12
 
+### 📊 OSIS CRM
+- **`osis`** - OSIS 백엔드
+  - 기술스택: Java (Spring Boot)
+  - 타입: Private
+  - 역할: 보험 영업 CRM API 서버
+  - 최근 업데이트: 2026-01-12
+
+- **`osis_front`** - OSIS 프론트엔드
+  - 기술스택: JavaScript
+  - 타입: Private
+  - 역할: 보험 영업 CRM 사용자 인터페이스
+  - 최근 업데이트: 2026-01-12
+
 ### 💼 비즈니스 솔루션
 - **`CallNote`** - 통화 노트 시스템 V1
   - 기술스택: Java (Spring Boot)
