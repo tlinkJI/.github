@@ -3,17 +3,17 @@
 ## 📦 저장소 (Repositories) 구조
 
 ### 🎙️ 콜노트 웹 (VoiceWeb V1)
-- **`VoiceWeb_V1`** - 백엔드 
+- **`VoiceWeb_V1`** - 백엔드
   - 기술스택: Java (Spring Boot)
   - 타입: Private
   - 역할: 음성 처리 및 API 서버
-  - 최근 업데이트: 2025-09-16
+  - 최근 업데이트: 2026-01-12
 
 - **`VoiceWeb_V1_Front`** - 프론트엔드
   - 기술스택: JavaScript
   - 타입: Private
   - 역할: 음성 웹 사용자 인터페이스
-  - 최근 업데이트: 2025-09-16
+  - 최근 업데이트: 2026-01-12
 
 ### 📱 모바일 애플리케이션
 - **`tlinkmobile`** - 모바일 CRM 시스템
@@ -28,12 +28,31 @@
   - 역할: 콜노트 모바일 어플리케이션 V1
   - 최근 업데이트: 2025-09-16
 
+### 💬 메신저
+- **`TlinkTalk`** - TlinkTalk 백엔드 서버
+  - 기술스택: JavaScript (Express, WebSocket)
+  - 타입: Private
+  - 역할: 메신저 API 서버 및 실시간 통신
+  - 최근 업데이트: 2025-01-12
+
+- **`electron_tlinktalk`** - TlinkTalk 데스크톱 클라이언트
+  - 기술스택: JavaScript (Electron)
+  - 타입: Public
+  - 역할: 데스크톱 메신저 클라이언트
+  - 최근 업데이트: 2025-01-12
+
 ### 💼 비즈니스 솔루션
-- **`CallNote`** - 통화 노트 시스템
+- **`CallNote`** - 통화 노트 시스템 V1
   - 기술스택: Java (Spring Boot)
   - 타입: Private
   - 역할: 통화 기록 및 메모 관리
   - 최근 업데이트: 2025-09-16
+
+- **`CallNote_V2`** - 통화 노트 시스템 V2
+  - 기술스택: Java
+  - 타입: Private
+  - 역할: 통화 기록 및 메모 관리 (개선 버전)
+  - 최근 업데이트: 2026-01-09
 
 ### 🔄 녹취 모듈 시스템
 - **`All_CRM_V1`** - CRM 통화 녹음 및 복구 솔루션 V1
