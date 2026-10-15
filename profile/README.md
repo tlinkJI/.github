@@ -30,8 +30,8 @@
 | **PBX** | pbx_ami | ✅ 운영중 |
 | **소프트폰** | tlinkpbx-phone | ✅ 운영중 |
 | **메신저** | TlinkTalk / TlinkTalkWeb / electron_tlinktalk | 🔄 개발중 |
-| **티링크온** | TlinkOn / TlinkOnApp | 🔄 개발중 |
-| **알림** | CloudNote | 🧪 테스트중 |
+| **티링크온** | TlinkOn / TlinkOnApp | ✅ 운영중 |
+| **알림** | CloudNote | ✅ 운영중 |
 
 ### 관리
 
@@ -101,9 +101,9 @@
 | 메신저 | `TlinkTalk` | 메신저 백엔드 | 🔄 개발중 |
 | 메신저 | `TlinkTalkWeb` | 메신저 웹 | 🔄 개발중 |
 | 메신저 | `electron_tlinktalk` | 메신저 데스크톱 | 🔄 개발중 |
-| 티링크온 | `TlinkOn` | 티링크온 백엔드 | 🔄 개발중 |
-| 티링크온 | `TlinkOnApp` | 티링크온 안드로이드 | 🔄 개발중 |
-| 알림 | `CloudNote` | 웹소켓 통지 클라이언트 | 🧪 테스트중 |
+| 티링크온 | `TlinkOn` | 티링크온 백엔드 | ✅ 운영중 |
+| 티링크온 | `TlinkOnApp` | 티링크온 안드로이드 | ✅ 운영중 |
+| 알림 | `CloudNote` | 웹소켓 통지 클라이언트 | ✅ 운영중 |
 | 관리 | `billing` | 과금관리 웹서버 | ✅ 운영중 |
 
 ### 🎙️ AI/협력 (봄소프트)
