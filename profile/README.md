@@ -12,30 +12,39 @@
 |---------|------|:----:|
 | **VoiceCRM** | 인바운드 CRM (로컬 Whisper STT) | ✅ 운영중 |
 | **OSIS CRM** | 아웃바운드 보험영업 CRM | ✅ 운영중 |
+| **TlinkNote** | 클라우드 CRM | ✅ 운영중 |
 
 ### 녹취 모듈
 
-| 프로젝트 | 설명 | 상태 |
-|---------|------|:----:|
-| **녹취 모듈 (신버전)** | New_voice / new_voice_web / tlinkmobile | ✅ 운영중 |
-| **녹취 모듈 (클라우드)** | NCP 클라우드형 | ✅ 운영중 |
-| **녹취 모듈 (모이다카)** | 모이다카 커스텀 | ✅ 운영중 |
+| 구분 | 프로젝트 | 상태 |
+|------|---------|:----:|
+| **엔진** | New_voice, New_voice_NCP, New_voice_pbx, All_CRM, All_CRM_STT | ✅ 운영중 |
+| **웹서버** | new_voice_web, new_voice_web_ncp, Moidacar_voice | ✅ 운영중 |
+| **클라이언트** | NewCallNote, CallNote_V2 | ✅ 운영중 |
+| **모바일** | tlinkmobile | ✅ 운영중 |
 
 ### 통신/인프라
 
+| 구분 | 프로젝트 | 상태 |
+|------|---------|:----:|
+| **PBX** | pbx_ami | ✅ 운영중 |
+| **소프트폰** | tlinkpbx-phone | ✅ 운영중 |
+| **메신저** | TlinkTalk / TlinkTalkWeb / electron_tlinktalk | 🔄 개발중 |
+| **티링크온** | TlinkOn / TlinkOnApp | 🔄 개발중 |
+| **알림** | CloudNote | 🧪 테스트중 |
+
+### 관리
+
 | 프로젝트 | 설명 | 상태 |
 |---------|------|:----:|
-| **TlinkTalk** | 메신저 | 🔄 개발중 |
-| **TlinkOn** | 티링크온 | 🔄 개발중 |
-| **CloudNote** | 클라우드 웹소켓 통지 | 🧪 테스트중 |
+| **billing** | 과금관리 웹서버 | ✅ 운영중 |
 
-### AI 음성 (협력 - 봄소프트)
+### AI/협력 (봄소프트)
 
 | 프로젝트 | 설명 | 상태 |
 |---------|------|:----:|
 | **Walkie** | 실시간 STT 서버 | 🔄 개발중 |
 | **WhisperTrain** | Whisper 모델 학습 | 🔄 개발중 |
-| **SoftPhone** | VoIP 소프트폰 | 🤝 협력중 |
 
 ---
 
@@ -59,38 +68,50 @@
 | `OsisClient` | 데스크톱 클라이언트 | Kotlin (Compose Multiplatform) |
 | `OsisRelay` | 중계서버 | - |
 
+### 📱 TlinkNote (운영중)
+
+| 저장소 | 역할 | 기술스택 |
+|-------|------|---------|
+| `TlinkNoteApi` | 백엔드 API | Java (Spring Boot) |
+| `TlinkNote` | 프론트엔드 | JavaScript |
+| `TlinkNoteClient` | 데스크톱 클라이언트 | Electron |
+
 ### 🎙️ 녹취 모듈 (운영중)
 
-| 저장소 | 역할 | 버전 |
-|-------|------|------|
-| `New_voice` | 녹취 엔진 (신버전) | v4.0.5 |
-| `new_voice_web` | 웹서버 (신버전) | v2026.05.30 |
-| `tlinkmobile` | 모바일 앱 | v14.0 |
-| `All_CRM_STT` | 녹취 엔진 (화자분리) | v4.3.92 |
-| `All_CRM` | 녹취 엔진 (레거시) | - |
-| `New_voice_NCP` | 녹취 엔진 (NCP 클라우드) | - |
-| `new_voice_web_ncp` | 웹서버 (NCP 클라우드) | - |
-| `New_voice_moidacar` | 녹취 엔진 (모이다카) | v3.0.11 |
-| `Moidacar_voice` | 웹서버 (모이다카) | - |
+| 구분 | 저장소 | 역할 |
+|------|-------|------|
+| 엔진 | `New_voice` | 녹취 엔진 (온프레미스) |
+| 엔진 | `New_voice_NCP` | 녹취 엔진 (클라우드) |
+| 엔진 | `New_voice_pbx` | 녹취 엔진 (클라우드 PBX) |
+| 엔진 | `All_CRM` | 녹취 엔진 (화자분리X) |
+| 엔진 | `All_CRM_STT` | 녹취 엔진 (화자분리O) |
+| 웹서버 | `new_voice_web` | 웹서버 (온프레미스) |
+| 웹서버 | `new_voice_web_ncp` | 웹서버 (클라우드) |
+| 웹서버 | `Moidacar_voice` | 웹서버 (모이다카) |
+| 클라이언트 | `NewCallNote` | 콜노트 신버전 |
+| 클라이언트 | `CallNote_V2` | 콜노트 V2 |
+| 모바일 | `tlinkmobile` | 모바일 앱 |
 
 ### 📡 통신/인프라
 
-| 저장소 | 역할 | 기술스택 | 상태 |
-|-------|------|---------|:----:|
-| `pbx_ami` | PBX API 서버 | - | ✅ 운영중 |
-| `TlinkTalk` | 메신저 백엔드 | Express, WebSocket | 🔄 개발중 |
-| `electron_tlinktalk` | 메신저 데스크톱 | Electron | 🔄 개발중 |
-| `TlinkOn` | 티링크온 백엔드 | - | 🔄 개발중 |
-| `TlinkOnApp` | 티링크온 안드로이드 | Android | 🔄 개발중 |
-| `CloudNote` | 웹소켓 통지 클라이언트 | - | 🧪 테스트중 |
+| 구분 | 저장소 | 역할 | 상태 |
+|------|-------|------|:----:|
+| PBX | `pbx_ami` | PBX API 서버 | ✅ 운영중 |
+| 소프트폰 | `tlinkpbx-phone` | TlinkPBX 소프트폰 | ✅ 운영중 |
+| 메신저 | `TlinkTalk` | 메신저 백엔드 | 🔄 개발중 |
+| 메신저 | `TlinkTalkWeb` | 메신저 웹 | 🔄 개발중 |
+| 메신저 | `electron_tlinktalk` | 메신저 데스크톱 | 🔄 개발중 |
+| 티링크온 | `TlinkOn` | 티링크온 백엔드 | 🔄 개발중 |
+| 티링크온 | `TlinkOnApp` | 티링크온 안드로이드 | 🔄 개발중 |
+| 알림 | `CloudNote` | 웹소켓 통지 클라이언트 | 🧪 테스트중 |
+| 관리 | `billing` | 과금관리 웹서버 | ✅ 운영중 |
 
-### 🎙️ AI 음성 (협력 - 봄소프트)
+### 🎙️ AI/협력 (봄소프트)
 
 | 저장소 | 역할 | 기술스택 |
 |-------|------|---------|
 | `Walkie` | STT 웹서버 | Java (Spring Boot) |
 | `WhisperTrain` | Whisper 모델 학습 | Python |
-| `SoftPhone` | VoIP 소프트폰 | JavaScript (Electron) |
 
 ### 🛠️ 문서/설정
 
@@ -112,4 +133,4 @@
 
 ---
 
-📅 *최종 업데이트: 2026-06-23*
+📅 *최종 업데이트: 2026-10-15*
